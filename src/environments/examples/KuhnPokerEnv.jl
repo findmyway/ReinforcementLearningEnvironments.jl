@@ -141,16 +141,16 @@ end
 
 RLBase.current_player(env::KuhnPokerEnv) =
     if length(env.cards) < 2
-    CHANCE_PLAYER
-elseif length(env.actions) == 0
-    1
-elseif length(env.actions) == 1
-    2
-elseif length(env.actions) == 2
-    1
-else
-    2  # actually the game is over now
-end
+        CHANCE_PLAYER
+    elseif length(env.actions) == 0
+        1
+    elseif length(env.actions) == 1
+        2
+    elseif length(env.actions) == 2
+        1
+    else
+        2  # actually the game is over now
+    end
 
 RLBase.NumAgentStyle(::KuhnPokerEnv) = MultiAgent(2)
 RLBase.DynamicStyle(::KuhnPokerEnv) = SEQUENTIAL

@@ -2,7 +2,11 @@ export StochasticEnv
 
 using StatsBase: sample, Weights
 
+<<<<<<< HEAD
 struct StochasticEnv{E <: AbstractEnv,R} <: AbstractEnvWrapper
+=======
+struct StochasticEnv{E<:AbstractEnv,R} <: AbstractEnvWrapper
+>>>>>>> upstream/master
     env::E
     rng::R
 end
